@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Edit account</title>
+    <style>
+        :root {
+        --white: #FFFFFF;
+        --black: #000000;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #ACD9B2;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+            box-sizing: border-box;
+        }
+        .login {
+            width: 100%;
+            height: 100vh;
+            display:grid;
+            place-items: center;
+        }
+        .form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        
+        .title {
+            font-size:var(--lg);
+            margin-bottom: 50px;
+            text-align: start;
+        }
+        
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .secondary-button {
+            background-color: var(--white);
+            border-radius: 10px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            width: 100%;
+            height: 50px;
+            cursor: pointer;
+            font-size: var(--lg);
+            font-weight: bold;
+        }
+        .edit-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        .value {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            margin-bottom: 40px;
+        }
+        @media (max-width: 640px) {
+           .password-value{
+               margin-bottom: 250px;
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <h1 class="title">My account</h1>
+
+            <form action="/" class="form">
+
+                <label for="name" class="label">Name</label>
+                <p class="value name-value">Camila Yokoo</p>
+
+                <label for="Email" class="label">Email address</label>
+                <p class="value email-value">camilayokoo@gmail.com</p>
+
+                <label for="password" class="label">Password</label>
+                <p class="value password-value">************</p>
+
+                <input type="submit" value="Edit" class="secondary-button edit-button">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
